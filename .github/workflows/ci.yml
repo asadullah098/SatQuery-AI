@@ -9,9 +9,9 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @satquery/web build
       - run: pnpm --filter @satquery/web typecheck
       - run: pnpm --filter @satquery/web lint
-      - run: pnpm --filter @satquery/web build
   api:
     runs-on: ubuntu-latest
     steps:
