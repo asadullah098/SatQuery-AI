@@ -1,0 +1,11 @@
+{
+  "name": "satquery-ai",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "pnpm --filter @satquery/web dev",
+    "build": "pnpm --filter @satquery/web build",
+    "lint": "pnpm --filter @satquery/web lint",
+    "typecheck": "pnpm --filter @satquery/web typecheck"
+  }
+}

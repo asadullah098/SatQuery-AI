@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js & Frontend builds
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# Python & Testing
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.ruff_cache/
+.pytest_cache/
+
+# Local Environment & Secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Runtime Data, Databases & User Uploads
+uploads/
+**/uploads/
+data/
+**/data/
+reports/
+checkpoints/
+*.db
+*.sqlite
+*.sqlite3
+
+# Model Weights & Binaries
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary Documents & Working Artifacts
+.docx_work/
+deliverables/
+*.log

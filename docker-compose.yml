@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports: ["8000:8000"]
+    volumes: ["satquery-data:/app/data", "satquery-uploads:/app/uploads"]
+    environment: ["SATQUERY_INFERENCE_MODE=mock"]
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    ports: ["3000:3000"]
+    environment: ["NEXT_PUBLIC_SATQUERY_API_URL=http://localhost:8000"]
+    depends_on: [api]
+volumes:
+  satquery-data:
+  satquery-uploads:
